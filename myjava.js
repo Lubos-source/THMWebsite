@@ -4,5 +4,5 @@ function github() {
 
 
 function mail(){
-window.open("https://lubos-source.w3spaces.com/blank.html")
+window.open("https://lubos-source.github.io/THMWebsite/blank.html")
 }
