@@ -10,5 +10,7 @@ This site is in WORKING and keep in mind that I used free version of w3 schools 
 <h2><b><a href="https://lubos-source.github.io/THMWebsite/" target="_blank"> MAIN project SITE </a></b> </h2>
 <br>
 <br>
+<h4><a href="http://thmlubossourcewebsite.wz.cz/" target="_blank"> Another hosting </a> </h4>
+<br>
 <br>
 <h4><a href="https://lubos-source.w3spaces.com/" target="_blank"> backup project SITE </a> </h4>
