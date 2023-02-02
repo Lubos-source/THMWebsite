@@ -34,7 +34,7 @@ function getCookie(cname) {
 
 function checkCookie() {
   let username = getCookie("username");
-  if (username != "") {
+  if ((username != "")&&(username!=null)) {
    //alert("Welcome again " + username);
    console.log("cookie found");
    document.getElementById("user").textContent="user " + username; //SECURE
@@ -46,6 +46,7 @@ function checkCookie() {
       setCookie("username", username, 365);
       document.getElementById("user").textContent="user " + username;
     }
+    else{checkCookie()}
   }
 }
 
