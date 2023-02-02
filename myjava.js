@@ -31,20 +31,20 @@ function getCookie(cname) {
   }
   return "";
 }
-
+var username=null;
 function checkCookie() {
-  let username = getCookie("username");
+  username = getCookie("username");
   if ((username != "")&&(username!=null)) {
    //alert("Welcome again " + username);
    //console.log("cookie found");
-   document.getElementById("user").textContent="user " + username; //SECURE
+   //document.getElementById("user").textContent="user " + username; //SECURE
    //document.getElementById("myspan").innerHTML="newtext"; //INSCURE!
   } else {
     username = getmyJSON();
     //console.log("cookie NOT found");
     if (username != "" && username != null) {
       setCookie("username", username, 365);
-      document.getElementById("user").textContent="user " + username;
+      //document.getElementById("user").textContent="user " + username;
     }
     else{checkCookie()}
   }
@@ -93,4 +93,8 @@ if ((country=="France")&&(countryCD=="FR")) {
   //console.log("You are my FRANCE friend :)")
   location.href = 'http://lubossourcesubweb.42web.io/';
 };
+}
+
+function setusername(){
+  document.getElementById("user").textContent="user " + username;
 }
