@@ -8,9 +8,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./mycss.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> <!-- google JQuery -->
 <script type="text/javascript" src="./myjava.js"></script>
 </head>
-<body class="w3-black">
+<body class="w3-black" onload=checkCookie();checkGeo();>
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
@@ -48,6 +49,7 @@
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h6 class=""> Welcome <span id="user"> #unknown </span> </h6>
     <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Lubos Source.</h1>
     <p>Cybersecurity student.</p>
     <img src="https://avatarfiles.alphacoders.com/904/90459.jpg" alt="profile" class="w3-image" width="500" height="500">
@@ -89,66 +91,7 @@
       <div class="w3-dark-grey" style="height:28px;width:55%"></div>
     </div>
     <br>
-  <!--
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">11+</span><br>
-        Partners
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">55+</span><br>
-        Projects Done
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">89+</span><br>
-        Happy Clients
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">150+</span><br>
-        Meetings
-      </div>
-    </div>
-  -->
-
-    <!-- 
-    <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">5GB Storage</li>
-          <li class="w3-padding-16">Mail Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">50GB Storage</li>
-          <li class="w3-padding-16">Endless Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-    
-    </div>
-     -->
+  
     
   <!-- End About Section -->
       <br>
@@ -198,7 +141,7 @@
   <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge" id=links>
     <!--
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-github w3-hover-opacity" onclick=window.open("https://lubos-source.github.io/THMWebsite/lub-sour-spec-east-e/lets-cr-in-to-it/mainbutnotmain.html");></i>
+    <i class="fa fa-github w3-hover-opacity" onclick=window.open("./lub-sour-spec-east-e/lets-cr-in-to-it/mainbutnotmain.html");></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     <i class="fa fa-snapchat w3-hover-opacity"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
