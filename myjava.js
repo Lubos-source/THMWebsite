@@ -56,7 +56,7 @@ function getmyJSON(){
   var usersip=null;
   console.log(location.protocol);
   //HTTPS ip finder //https://ipapi.co/json/
-  if (location.protocol == 'https:') {
+  if (window.location.protocol == "https:") {
     console.log("HTTPS");
         $.getJSON('https://ipapi.co/json/', function(data) {  //https://www.google.com/search?q=%http://ip-api.com/json&btnI=Im+Feeling+Lucky
           usersip = ((data.ip)); 
@@ -67,7 +67,7 @@ function getmyJSON(){
         });
 
         
-  }else if((location.protocol == 'http')||(location.protocol =='file:')){ //if(location.protocol == 'http:') 
+  }else if((window.location.protocol == "http:")||(location.protocol =='file:')){ //if(location.protocol == 'http:') 
     console.log("HTTP:");
         $.getJSON('http://ip-api.com/json', function(data) {  //https://www.google.com/search?q=%http://ip-api.com/json&btnI=Im+Feeling+Lucky
           usersip = ((data.query)); // strip what i need // maybe? JSON.stringify()
