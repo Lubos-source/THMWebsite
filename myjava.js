@@ -54,26 +54,28 @@ var country=null;
 var countryCD=null;
 function getmyJSON(){
   var usersip=null;
-
+  console.log(location.protocol);
   //HTTPS ip finder //https://ipapi.co/json/
-  if (location.protocol == 'https:') {
+  if (location.protocol == 'HTTPS:') {
     console.log("HTTPS");
         $.getJSON('https://ipapi.co/json/', function(data) {  //https://www.google.com/search?q=%http://ip-api.com/json&btnI=Im+Feeling+Lucky
           usersip = ((data.ip)); 
           country=(data.country_name)
           countryCD=(data.country_code)
           console.log(JSON.stringify(data, null, 2)); //returns all data
+          console.log(location.protocol);
         });
 
         
-  }else { //if(location.protocol == 'http:') 
-    console.log("HTTP");
+  }else if((location.protocol == 'HTTP:')||(location.protocol =='file:')){ //if(location.protocol == 'http:') 
+    console.log("HTTP:");
         $.getJSON('http://ip-api.com/json', function(data) {  //https://www.google.com/search?q=%http://ip-api.com/json&btnI=Im+Feeling+Lucky
           usersip = ((data.query)); // strip what i need // maybe? JSON.stringify()
           //document.getElementById("user").textContent="user " + ip; //SECURE
           country=(data.country)
           countryCD=(data.countryCode)
           console.log(JSON.stringify(data, null, 2)); //returns all data
+          console.log(location.protocol);
         });
   };
   
