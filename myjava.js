@@ -36,12 +36,12 @@ function checkCookie() {
   let username = getCookie("username");
   if ((username != "")&&(username!=null)) {
    //alert("Welcome again " + username);
-   console.log("cookie found");
+   //console.log("cookie found");
    document.getElementById("user").textContent="user " + username; //SECURE
    //document.getElementById("myspan").innerHTML="newtext"; //INSCURE!
   } else {
     username = getmyJSON();
-    console.log("cookie NOT found");
+    //console.log("cookie NOT found");
     if (username != "" && username != null) {
       setCookie("username", username, 365);
       document.getElementById("user").textContent="user " + username;
@@ -54,28 +54,27 @@ var country=null;
 var countryCD=null;
 function getmyJSON(){
   var usersip=null;
-  console.log(location.protocol);
   //HTTPS ip finder //https://ipapi.co/json/
   if (window.location.protocol == "https:") {
-    console.log("HTTPS");
+    //console.log("HTTPS");
         $.getJSON('https://ipapi.co/json/', function(data) {  //https://www.google.com/search?q=%http://ip-api.com/json&btnI=Im+Feeling+Lucky
           usersip = ((data.ip)); 
           country=(data.country_name)
           countryCD=(data.country_code)
-          console.log(JSON.stringify(data, null, 2)); //returns all data
-          console.log(location.protocol);
+          //console.log(JSON.stringify(data, null, 2)); //returns all data
+          //console.log(location.protocol);
         });
 
         
-  }else if((window.location.protocol == "http:")||(location.protocol =='file:')){ //if(location.protocol == 'http:') 
-    console.log("HTTP:");
+  }else if((window.location.protocol == "http:")||(window.location.protocol =="file:")){ //if(location.protocol == 'http:') 
+    //console.log("HTTP:");
         $.getJSON('http://ip-api.com/json', function(data) {  //https://www.google.com/search?q=%http://ip-api.com/json&btnI=Im+Feeling+Lucky
           usersip = ((data.query)); // strip what i need // maybe? JSON.stringify()
           //document.getElementById("user").textContent="user " + ip; //SECURE
           country=(data.country)
           countryCD=(data.countryCode)
-          console.log(JSON.stringify(data, null, 2)); //returns all data
-          console.log(location.protocol);
+          //console.log(JSON.stringify(data, null, 2)); //returns all data
+          //console.log(location.protocol);
         });
   };
   
